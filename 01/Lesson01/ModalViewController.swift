@@ -21,6 +21,13 @@ class ModalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//I added some code to close the modal here. First connected the UI button as an outlet and then added a dismiss function! Yay
+    
+    @IBOutlet weak var closeButton: UIBarButtonItem!
+    
+    @IBAction func buttonClicked(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     
     /*

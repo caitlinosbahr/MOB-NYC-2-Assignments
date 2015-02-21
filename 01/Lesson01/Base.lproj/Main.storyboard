@@ -139,7 +139,7 @@
         <!--Info-->
         <scene sceneID="Icp-KS-uHJ">
             <objects>
-                <viewController id="c6Q-0B-aSr" userLabel="Info" sceneMemberID="viewController">
+                <viewController id="c6Q-0B-aSr" userLabel="Info" customClass="ModalViewController" customModule="Lesson01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hm0-ad-l69"/>
                         <viewControllerLayoutGuide type="bottom" id="8ro-s8-o1E"/>
@@ -175,8 +175,15 @@
                         <barButtonItem title="Item" id="32l-VO-dJz"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Bio" id="MG4-J1-JCo">
-                        <barButtonItem key="leftBarButtonItem" title="OK" id="vL0-Xp-eMW"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="vL0-Xp-eMW">
+                            <connections>
+                                <action selector="buttonClicked:" destination="c6Q-0B-aSr" id="ZNR-Ik-dPd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="closeButton" destination="vL0-Xp-eMW" id="G9A-Hx-bFD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYH-bZ-wc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
