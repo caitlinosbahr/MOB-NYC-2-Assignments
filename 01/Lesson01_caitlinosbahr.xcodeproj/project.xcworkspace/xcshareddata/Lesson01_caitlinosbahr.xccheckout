@@ -10,31 +10,31 @@
 	<string>Lesson01_caitlinosbahr</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>586291DA112D60CD4120B69542ACC073F2A42336</key>
-		<string>https://github.com/ga-students/MOB-NYC-2.git</string>
+		<key>7929D607793D7382CE5AE5E257D3E20ED01D3F82</key>
+		<string>https://github.com/theletterc/MOB-NYC-2-Assignments.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Assessments/01/Lesson01_caitlinosbahr.xcodeproj</string>
+	<string>01/Lesson01_caitlinosbahr.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>586291DA112D60CD4120B69542ACC073F2A42336</key>
-		<string>../../../..</string>
+		<key>7929D607793D7382CE5AE5E257D3E20ED01D3F82</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ga-students/MOB-NYC-2.git</string>
+	<string>https://github.com/theletterc/MOB-NYC-2-Assignments.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>586291DA112D60CD4120B69542ACC073F2A42336</string>
+	<string>7929D607793D7382CE5AE5E257D3E20ED01D3F82</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>586291DA112D60CD4120B69542ACC073F2A42336</string>
+			<string>7929D607793D7382CE5AE5E257D3E20ED01D3F82</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MOB-NYC-2</string>
+			<string>MOB-NYC-2-Assignments</string>
 		</dict>
 	</array>
 </dict>
