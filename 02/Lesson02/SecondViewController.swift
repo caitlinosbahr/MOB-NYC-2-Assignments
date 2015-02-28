@@ -9,7 +9,13 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var calcResult: UILabel!
     
     @IBAction func addNumber(sender: AnyObject) {
-        let totalNumber = calcResult.description
+        let originalNumber = calcResult.description
         let addedNumber = calcInput.description
+        let totalNumber = calcResult.text
+        
+        let a = originalNumber
+        let b = addedNumber
+        var c = a + b
     }
+
 }

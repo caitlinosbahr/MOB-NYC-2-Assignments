@@ -15,19 +15,22 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var ageInput: UITextField!
     
-
     
     @IBAction func generateText(sender: AnyObject) {
-        let name = nameInput.text
-        let age = ageInput.text
+        let userName = nameInput.text
+        let userAge = ageInput.text.toInt()
+
+        /*Todo one:
+        let greetingMessage = sayHello("") */
         
-        let greetingMessage = sayHello("")
+        //check out "optional binding"
+        if userAge != nil {
+            let greetingMessage = sayHelloTo(userName, age: userAge!)
+            labelField.text = greetingMessage
+        }
         
-//        let greetingMessage = sayHelloTo(name, age)
-        
-        labelField.text = greetingMessage
-    
     }
+    
     
     func sayHello(String) -> String {
         return "Hello world!"

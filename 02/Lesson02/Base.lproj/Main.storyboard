@@ -94,10 +94,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="ageField" destination="HD3-Of-BAd" id="Yv4-hu-Bd3"/>
                         <outlet property="ageInput" destination="HD3-Of-BAd" id="6kd-fR-we9"/>
                         <outlet property="labelField" destination="v2W-sh-fBn" id="iky-Ue-YTf"/>
-                        <outlet property="nameField" destination="dvu-Gz-gU3" id="sst-hd-3Bd"/>
                         <outlet property="nameInput" destination="dvu-Gz-gU3" id="caG-QG-A9E"/>
                     </connections>
                 </viewController>
