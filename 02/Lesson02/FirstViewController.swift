@@ -15,38 +15,64 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var ageInput: UITextField!
     
-    
+
     @IBAction func generateText(sender: AnyObject) {
+    /* Todo one and two
         let userName = nameInput.text
         let userAge = ageInput.text.toInt()
 
-        /*Todo one:
-        let greetingMessage = sayHello("") */
-        
-        //check out "optional binding"
+        let greetingMessage = sayHello("")
+        labelField.text = greetingMessage
+
         if userAge != nil {
             let greetingMessage = sayHelloTo(userName, age: userAge!)
             labelField.text = greetingMessage
+        }
+    
+    func sayHello(String) -> String {
+    return "Hello world!"
+    }
+    
+    func sayHelloTo(name: String, age: Int) -> String {
+    return "Hello \(name), you are \(age) years old!"
+    */
+    }
+
+
+        
+    @IBAction func checkAge(sender: AnyObject) {
+        /*
+        Todo three
+        let userAge = ageInput.text.toInt()
+        
+        if userAge != nil {
+            if userAge > 21 {
+                labelField.text =  "You can drink"
+            } else if userAge > 18 {
+                labelField.text =  "You can vote"
+            } else if userAge > 16 {
+                labelField.text =  "You can drive"
+            }
+        }
+        */
+    }
+
+    
+    //Todo four
+    @IBAction func checkAgeFancy(sender: AnyObject) {
+        let userAge = ageInput.text.toInt()
+        
+        if userAge != nil {
+            if userAge > 21 {
+                labelField.text =  "You can drive, vote and drink (but not at the same time!"
+            } else if userAge > 18 && userAge < 21 {
+                labelField.text =  "You can drive and vote"
+            } else if userAge > 16 && userAge < 18 {
+                labelField.text =  "You can drive"
+            }
         }
         
     }
     
     
-    func sayHello(String) -> String {
-        return "Hello world!"
-    }
-    
-    func sayHelloTo(name: String, age: Int) -> String {
-        return "Hello \(name), you are \(age) years old!"
-    }
-    
-
-
-
 }
-
-
-
-
-
-

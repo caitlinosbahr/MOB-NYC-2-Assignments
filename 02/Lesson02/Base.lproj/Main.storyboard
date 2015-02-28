@@ -70,7 +70,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="generateText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="T8S-Te-qMf"/>
+                                    <action selector="checkAge:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="53R-KN-ZnO"/>
+                                    <action selector="checkAgeFancy:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="O1F-2R-Hab"/>
+                                    <action selector="generateText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XYY-B2-cRS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -214,6 +216,9 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkEven:" destination="nKH-F5-XzW" eventType="touchUpInside" id="y9B-4x-sMK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -233,6 +238,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="numberField" destination="UJA-B5-7Cz" id="NJr-rX-N3o"/>
+                        <outlet property="numberLabel" destination="y0y-Zz-8RE" id="9Er-KD-cdw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bic-8V-fDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
