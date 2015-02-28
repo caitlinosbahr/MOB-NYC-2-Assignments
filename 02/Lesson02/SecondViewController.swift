@@ -7,12 +7,16 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var calcInput: UITextField!
     @IBOutlet weak var calcResult: UILabel!
 
-    @IBAction func addNumber(sender: AnyObject) {
-        let calcResult = ageInput.text.toInt()
-
-
-    }
+    var sum = 0
     
+    @IBAction func addNumber(sender: AnyObject) {
+        let addedNumber = calcInput.text.toInt()
+
+        if calcInput != nil {
+            sum += addedNumber!
+            calcResult.text = String(sum)
+        }
+    }
     
 
 }
