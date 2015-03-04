@@ -50,7 +50,7 @@ class FirstViewController: UIViewController {
                 labelField.text =  "You can drink"
             } else if userAge > 18 {
                 labelField.text =  "You can vote"
-            } else if userAge > 16 {
+            } else if userAge > q16 {
                 labelField.text =  "You can drive"
             }
         }
