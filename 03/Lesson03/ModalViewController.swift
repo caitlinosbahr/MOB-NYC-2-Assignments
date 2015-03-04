@@ -1,14 +1,17 @@
 import UIKit
 
 class ModalViewController: UIViewController {
-
+    
+    //defining the different views we're gonna want to show
     let dismissButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
     let modalImage:UIImage! = UIImage(named:"llama.jpg")
     
+    //creating a function to dismiss the modal
     func viewDismissed() {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    //initiating the modal view
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +27,7 @@ class ModalViewController: UIViewController {
         dismissButton.addTarget(self, action: "viewDismissed", forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(dismissButton)
         
+        //display an image if there is one
         if (modalImage != nil) {
             let imageView = UIImageView(image: modalImage)
             imageView.frame = view.frame
@@ -32,17 +36,5 @@ class ModalViewController: UIViewController {
         }
 
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
