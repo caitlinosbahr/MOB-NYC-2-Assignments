@@ -1,11 +1,3 @@
-//
-//  Animal.swift
-//  Lesson03
-//
-//  Created by Rudd Taylor on 9/28/14.
-//  Copyright (c) 2014 General Assembly. All rights reserved.
-//
-
 import UIKit
 
 class Animal: NSObject {
@@ -19,3 +11,11 @@ class Animal: NSObject {
         return "Animal name: " + self.name
     }
 }
+
+
+class Cat : Animal {
+    override func prettyAnimalName() -> String {
+        return "Cat name: " + self.name
+    }
+}
+

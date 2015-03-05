@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G0q-Oc-BQG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G0q-Oc-BQG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -65,6 +66,7 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                             <constraint firstItem="AG3-bY-Vru" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="atu-b6-PRJ"/>
                             <constraint firstItem="AG3-bY-Vru" firstAttribute="top" secondItem="NMl-Di-GNm" secondAttribute="bottom" constant="41" id="aw5-ia-0i2"/>
                             <constraint firstItem="NMl-Di-GNm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="123" id="du1-kU-7o0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NMl-Di-GNm" secondAttribute="trailing" constant="136" id="m7t-4T-qXW"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="AG3-bY-Vru" secondAttribute="bottom" constant="188" id="u9Q-hD-Lhp"/>
                         </constraints>
                         <connections>
