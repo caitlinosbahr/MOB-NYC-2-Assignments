@@ -21,14 +21,12 @@ class FourthViewController: UIViewController {
 
 class FibonacciAdder {
     func fibonacciNumberAtIndex(indexOfFibonacciNumber: Int) -> Int{
-        if(indexOfFibonacciNumber == 0){
-            return 0;
+        if indexOfFibonacciNumber == 0 {
+            return 0
         }
-        if(indexOfFibonacciNumber == 1){
-            return 1;
+        if indexOfFibonacciNumber == 1 {
+            return 1
         }
-        return fibonacciNumberAtIndex(indexOfFibonacciNumber - 1) + fibonacciNumberAtIndex(indexOfFibonacciNumber - 2);
+        return fibonacciNumberAtIndex(indexOfFibonacciNumber - 1) + fibonacciNumberAtIndex(indexOfFibonacciNumber - 2)
     }
 }
-
-
