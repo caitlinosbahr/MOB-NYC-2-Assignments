@@ -15,7 +15,10 @@ class SecondViewController: UIViewController {
         if calcInput != nil {
             sum += addedNumber!
             calcResult.text = String(sum)
+            calcInput.text = ""
         }
+        
+
     }
     
 

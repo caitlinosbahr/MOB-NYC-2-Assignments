@@ -47,11 +47,11 @@ class FirstViewController: UIViewController {
         
         if userAge != nil {
             if userAge >= 21 {
-                labelField.text =  "You can drink"
+                labelField.text = "You can drink"
             } else if userAge >= 18 {
-                labelField.text =  "You can vote"
+                labelField.text = "You can vote"
             } else if userAge >= 16 {
-                labelField.text =  "You can drive"
+                labelField.text = "You can drive"
             }
         }
         */
