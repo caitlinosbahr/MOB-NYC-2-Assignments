@@ -15,6 +15,9 @@ class ThirdViewController: UIViewController {
             if number! % 2 == 0 {
                 numberLabel.text = "Number is even"
             }
+            else {
+                numberLabel.text = "It's odd!"
+            }
         }
     }
 
