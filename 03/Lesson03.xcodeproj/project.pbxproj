@@ -15,7 +15,7 @@
 		5DCED9A919D8DF0800DE1DC2 /* ArrayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCED9A819D8DF0800DE1DC2 /* ArrayTableViewController.swift */; };
 		5DCED9AB19D8DF4E00DE1DC2 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCED9AA19D8DF4E00DE1DC2 /* Animal.swift */; };
 		9851FF4C1AA798E1001004B6 /* llama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9851FF4B1AA798E1001004B6 /* llama.jpg */; };
-		98E1515E1AA792FF00E111CC /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E1515D1AA792FF00E111CC /* ModalViewController.swift */; };
+		98EEAFBA1AA93CCE008C034E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EEAFB91AA93CCE008C034E /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		5DCED9A819D8DF0800DE1DC2 /* ArrayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewController.swift; sourceTree = "<group>"; };
 		5DCED9AA19D8DF4E00DE1DC2 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		9851FF4B1AA798E1001004B6 /* llama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = llama.jpg; sourceTree = "<group>"; };
-		98E1515D1AA792FF00E111CC /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		98EEAFB91AA93CCE008C034E /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 		5DCED98519D8DC9B00DE1DC2 /* Lesson03 */ = {
 			isa = PBXGroup;
 			children = (
+				98EEAFB91AA93CCE008C034E /* ModalViewController.swift */,
 				9851FF4B1AA798E1001004B6 /* llama.jpg */,
-				98E1515D1AA792FF00E111CC /* ModalViewController.swift */,
 				5DCED9A819D8DF0800DE1DC2 /* ArrayTableViewController.swift */,
 				5DCED9AA19D8DF4E00DE1DC2 /* Animal.swift */,
 				5DCED98819D8DC9B00DE1DC2 /* AppDelegate.swift */,
@@ -222,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DCED9A919D8DF0800DE1DC2 /* ArrayTableViewController.swift in Sources */,
-				98E1515E1AA792FF00E111CC /* ModalViewController.swift in Sources */,
+				98EEAFBA1AA93CCE008C034E /* ModalViewController.swift in Sources */,
 				5DCED9AB19D8DF4E00DE1DC2 /* Animal.swift in Sources */,
 				5DCED98B19D8DC9B00DE1DC2 /* ViewController.swift in Sources */,
 				5DCED98919D8DC9B00DE1DC2 /* AppDelegate.swift in Sources */,

@@ -18,8 +18,11 @@ class ViewController: UIViewController {
     }
     
     func showModal() {
-        presentViewController(ModalViewController(), animated: true, completion: nil)
+        presentViewController(ModalViewController, animated: true, completion: nil)
     }
     
+    @IBAction func clickViewTable(sender: AnyObject) {
+        performSegueWithIdentifier("showTable", sender: self)
+    }
 }
 
