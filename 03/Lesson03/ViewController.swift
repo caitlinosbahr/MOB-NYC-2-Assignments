@@ -18,8 +18,12 @@ class ViewController: UIViewController {
     }
     
     func showModal() {
-        presentViewController(ModalViewController, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let destination = storyboard.instantiateViewControllerWithIdentifier("ModalViewController") as UIViewController
+        presentViewController(destination, animated: true, completion: nil)
+        
     }
+    
     
     @IBAction func clickViewTable(sender: AnyObject) {
         performSegueWithIdentifier("showTable", sender: self)
