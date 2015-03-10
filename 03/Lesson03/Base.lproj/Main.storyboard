@@ -108,7 +108,6 @@
                                 </state>
                                 <connections>
                                     <action selector="clickDismiss:" destination="fcn-nw-Nr0" eventType="touchUpInside" id="3eV-7v-ZUo"/>
-                                    <action selector="dismissView:" destination="fcn-nw-Nr0" eventType="touchUpInside" id="L00-fU-C94"/>
                                 </connections>
                             </button>
                         </subviews>

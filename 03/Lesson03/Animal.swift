@@ -15,7 +15,7 @@ class Animal: NSObject {
 
 class Cat : Animal {
     override func prettyAnimalName() -> String {
-        return "Cat name: " + self.name
+        return self.name + " is fuzzy!"
     }
 }
 
