@@ -39,11 +39,11 @@ class ArrayViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-//    func textFieldShouldReturn (textField: UITextField) -> Bool {
-//        addCell()
-//        textField.resignFirstResponder()
-//        return true
-//    }
+    func textFieldShouldReturn (textField: UITextField) -> Bool {
+        addCell()
+        textField.resignFirstResponder()
+        return true
+    }
 
     
 }
