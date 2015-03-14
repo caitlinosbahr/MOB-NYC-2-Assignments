@@ -1,6 +1,6 @@
 import UIKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +29,11 @@ class MapViewController: UIViewController {
     
     func saveInfo() {
         contacts[emailField.text] = phoneNumberField.text
-        println(contacts)
+//        println(contacts)
     }
 
     
-    // Adding the cell adds the stuff in the dictionary!!!
+    //Adding the cell shows the stuff in the dictionary!
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
@@ -43,8 +43,28 @@ class MapViewController: UIViewController {
         contacts.keys
         tableView.reloadData()
     }
+    
+    
+    //Hitting return on keyboard should move from email to phone number, and then add the cell
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if (textField === emailField) {
+            phoneNumberField.becomeFirstResponder()
+        }else if (textField === phoneNumberField) {
+            phoneNumberField.resignFirstResponder()
+            saveInfo()
+            addCell()
+        }
+        return true
+    }
+    
+    //Forms should clear once you start editing
+    func textFieldShouldClear(textField: UITextField) -> Bool {
+        return true
+    }
 
     
+
+    //Build the table view
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("tableCell") as UITableViewCell
         
@@ -57,8 +77,5 @@ class MapViewController: UIViewController {
         return cell
     }
     
-
-    
-
     
 }
