@@ -16,9 +16,10 @@ class ArrayViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func tappedAddButton(sender: AnyObject) {
+    @IBAction func addButtonPressed(sender: AnyObject) {
         addCell()
     }
+
     
     var rows = [String]()
     
