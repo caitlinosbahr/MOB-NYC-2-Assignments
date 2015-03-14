@@ -5,6 +5,14 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var notify = NSNotificationCenter.defaultCenter()
+        
+        notify.addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+        
+        notify.addObserver(self, selector: Selector ("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+        
+        notify.addObserver(self, selector: Selector ("keyboardDidHide:"), name: UIKeyboardDidHideNotification, object: nil)
+        
         /*
         TODO three: Add TWO text views and a table view to this view controller, either using code or storybaord. Accept keyboard input from the two text views. When the 'return' button is pressed on the SECOND text view, add the text view data to a dictionary. The KEY in the dictionary should be the string in the first text view, the VALUE should be the second.
         TODO four: Make this class a UITableViewDelegate and UITableViewDataSource that supply this table view with cells that correspond to the values in the dictionary. Each cell should print out a unique pair of key/value that the map contains. When a new key/value is inserted, the table view should display it.
@@ -77,5 +85,22 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         return cell
     }
     
+    
+    //Changing the color of the backgrounds based on the keyboard
+    
+    func keyboardWillShow(notification : NSNotification) {
+        emailField.backgroundColor = UIColor.blueColor()
+        phoneNumberField.backgroundColor = UIColor.blueColor()
+    }
+    
+    func keyboardWillHide(notification : NSNotification) {
+        emailField.backgroundColor = UIColor.redColor()
+        phoneNumberField.backgroundColor = UIColor.redColor()
+    }
+    
+    func keyboardDidHide(notification: NSNotification) {
+        emailField.backgroundColor = UIColor.clearColor()
+        phoneNumberField.backgroundColor = UIColor.clearColor()
+    }
     
 }
