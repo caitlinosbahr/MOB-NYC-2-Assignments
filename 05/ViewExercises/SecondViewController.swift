@@ -1,10 +1,4 @@
-//
-//  SecondViewController.swift
-//  ViewExercises
-//
-//  Created by Rudd Taylor on 9/9/14.
-//  Copyright (c) 2014 Rudd Taylor. All rights reserved.
-//
+// STATUS: IGNORE THIS
 
 import UIKit
 
@@ -22,6 +16,9 @@ class SecondViewController: ExerciseViewController {
         
         Your view should be in self.exerciseView, not self.view
         */
+        
+        //THIS ONE IS A FREEBIE
+        
     }
     
     override func shouldAutorotate() -> Bool {

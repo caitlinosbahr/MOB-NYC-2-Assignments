@@ -1,10 +1,3 @@
-//
-//  SixthViewController.swift
-//  ViewExercises
-//
-//  Created by Rudd Taylor on 9/9/14.
-//  Copyright (c) 2014 Rudd Taylor. All rights reserved.
-//
 
 import UIKit
 

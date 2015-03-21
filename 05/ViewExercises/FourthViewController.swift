@@ -1,14 +1,10 @@
-//
-//  FourthViewController.swift
-//  ViewExercises
-//
-//  Created by Rudd Taylor on 9/9/14.
-//  Copyright (c) 2014 Rudd Taylor. All rights reserved.
-//
+//STATUS: Added all of the elements, need to wrap in scroll view
 
 import UIKit
 
-class FourthViewController: ExerciseViewController {
+class FourthViewController: ExerciseViewController, UIScrollViewDelegate {
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +20,55 @@ class FourthViewController: ExerciseViewController {
         
         Your view should be in self.exerciseView, not self.view.
         */
+        
+        var blueBox = UIView()
+        blueBox.backgroundColor = UIColor.blueColor()
+        blueBox.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        let blueBoxHeight = NSLayoutConstraint(item: blueBox, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 20)
+        
+        let blueBoxLeftMargin = NSLayoutConstraint(item: blueBox, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.exerciseView, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 10)
+        
+        let blueBoxRightMargin = NSLayoutConstraint(item: blueBox, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.exerciseView, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: -10)
+        
+        self.exerciseView.addSubview(blueBox)
+        self.exerciseView.addConstraints([blueBoxHeight, blueBoxLeftMargin, blueBoxRightMargin])
+        
+        
+        var purpleLabel = UILabel()
+        purpleLabel.backgroundColor = UIColor.purpleColor()
+        purpleLabel.textColor = UIColor.whiteColor()
+        purpleLabel.text = "I'm purple!"
+        purpleLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+
+        
+        let purpleLabelHeight = NSLayoutConstraint(item: purpleLabel, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 1000)
+    
+        let purpleLabelWidth = NSLayoutConstraint(item: purpleLabel, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self.exerciseView, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0)
+        
+        let purpleLabelAlign = NSLayoutConstraint(item: purpleLabel, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: blueBox, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0)
+        
+        self.exerciseView.addSubview(purpleLabel)
+        self.exerciseView.addConstraints([purpleLabelHeight, purpleLabelWidth, purpleLabelAlign])
+        
+        
+        var redBox = UIView()
+        redBox.backgroundColor = UIColor.redColor()
+        redBox.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        let redBoxHeight = NSLayoutConstraint(item: redBox, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 20)
+        
+        let redBoxLeftMargin = NSLayoutConstraint(item: redBox, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.exerciseView, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 10)
+        
+        let redBoxRightMargin = NSLayoutConstraint(item: redBox, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.exerciseView, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: -10)
+        
+        let redBoxAlign = NSLayoutConstraint(item: redBox, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: purpleLabel, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0)
+        
+        self.exerciseView.addSubview(redBox)
+        self.exerciseView.addConstraints([redBoxHeight, redBoxLeftMargin, redBoxRightMargin, redBoxAlign])
+
+        
+        
     }
     
     override func shouldAutorotate() -> Bool {
