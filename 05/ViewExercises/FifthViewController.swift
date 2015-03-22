@@ -4,7 +4,6 @@ import UIKit
 
 class FifthViewController: ExerciseViewController {
     
-    var greenButton : UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +37,32 @@ class FifthViewController: ExerciseViewController {
         self.exerciseView.addConstraints([greenButtonHeight, greenButtonWidth, xAlign, yAlign])
         
         greenButton.addTarget(self, action: "buttonClick", forControlEvents: UIControlEvents.TouchUpInside)
-        
-    }
-    
-    func buttonClick() {
-        println("Green button tapped")
-        
-//        UIView.animateWithDuration(0.5, animations: {
-//            self.greenButton.backgroundColor = UIColor.redColor()
-//            self.yAlign.constant -= 20
-//            }, completion: nil)
+
+
     }
 
+    var greenButton : UIButton?
+    var yAlign : NSLayoutConstraint?
     
+    
+    func buttonClick(sender: UIButton) {
+        println("Green button tapped")
+        
+        UIView.animateWithDuration(0.2, animations: {
+            self.greenButton!.backgroundColor = UIColor.redColor()
+            self.yAlign!.constant -= 20
+            self.view.layoutIfNeeded()
+            }, completion: { (finished) in
+                UIView.animateWithDuration(0.2, animations: {
+                    self.greenButton!.backgroundColor = UIColor.greenColor()
+                    self.yAlign!.constant += 20
+                    self.view.layoutIfNeeded()
+                })
+            }
+        )
+    }
+    
+
 
     
     override func shouldAutorotate() -> Bool {

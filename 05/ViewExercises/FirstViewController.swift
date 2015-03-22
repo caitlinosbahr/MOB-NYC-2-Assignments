@@ -1,4 +1,4 @@
-//STATUS: Need to properly align boxes to nav bar and tab bar
+//STATUS: Need to properly align boxes to nav bar and tab bar. Nothing is working :(
 
 
 import UIKit

@@ -1,4 +1,4 @@
-//STATUS: Contents of the scroll view aren't showing up. Errrrgggg.
+//STATUS: Scrollview won't scroll.
 
 
 import UIKit
@@ -24,13 +24,13 @@ class FourthViewController: ExerciseViewController, UIScrollViewDelegate {
         
         var scrollView = UIScrollView()
         scrollView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        
-        let scrollViewTop = NSLayoutConstraint(item: scrollView, attribute: .Top, relatedBy: .Equal, toItem: self.exerciseView, attribute: .Top, multiplier: 1, constant: 0)
-        let scrollViewLeft = NSLayoutConstraint(item: scrollView, attribute: .Left, relatedBy: .Equal, toItem: self.exerciseView, attribute: .Left, multiplier: 1, constant: 0)
-        let scrollViewRight = NSLayoutConstraint(item: scrollView, attribute: .Right, relatedBy: .Equal, toItem: self.exerciseView, attribute: .Right, multiplier: 1, constant: 0)
-        
         self.exerciseView.addSubview(scrollView)
-        self.exerciseView.addConstraints([scrollViewTop, scrollViewLeft, scrollViewRight])
+        
+        let scrollViewHeight = NSLayoutConstraint(item: scrollView, attribute: NSLayoutAttribute.Height, relatedBy: .Equal, toItem: self.exerciseView, attribute: .Height, multiplier: 1, constant: 0)
+        let scrollViewWidth = NSLayoutConstraint(item: scrollView, attribute: .Width, relatedBy: .Equal, toItem: self.exerciseView, attribute: .Width, multiplier: 1, constant: 0)
+        
+        self.exerciseView.addConstraints([scrollViewHeight, scrollViewWidth])
+        
         
         
         var blueBox = UIView()
@@ -82,10 +82,6 @@ class FourthViewController: ExerciseViewController, UIScrollViewDelegate {
 //        self.exerciseView.addSubview(redBox)
         scrollView.addSubview(redBox)
         self.exerciseView.addConstraints([redBoxHeight, redBoxLeftMargin, redBoxRightMargin, redBoxAlign])
-
-        
-        let scrollViewBottom = NSLayoutConstraint(item: scrollView, attribute: NSLayoutAttribute.Bottom, relatedBy: .Equal, toItem: redBox, attribute: .Bottom, multiplier: 1, constant: 0)
-        self.exerciseView.addConstraint(scrollViewBottom)
         
     }
     

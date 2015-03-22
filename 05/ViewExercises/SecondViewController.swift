@@ -1,4 +1,4 @@
-// STATUS: IGNORE THIS
+//I think this one is a freebie?
 
 import UIKit
 
@@ -17,7 +17,6 @@ class SecondViewController: ExerciseViewController {
         Your view should be in self.exerciseView, not self.view
         */
         
-        //THIS ONE IS A FREEBIE
         
     }
     
