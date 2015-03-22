@@ -1,3 +1,4 @@
+//STATUS: Stuff is showing up on the view, but not in the cells...
 
 import UIKit
 
@@ -36,6 +37,21 @@ class SixthViewController: ExerciseViewController, UITableViewDelegate, UITableV
         Add a label to each cell that is green and centered, and have its text say “Row {X}” (X is the row number of the cell). The tableview should rotate correctly. Use Autolayout.
         */
         
+        var label = UILabel()
+        label.text = "Row \(indexPath.row)"
+        label.textAlignment = .Center
+        label.textColor = .greenColor()
+        label.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.tableView.addSubview(label)
+        
+        let xConstraint = NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self.tableView, attribute: .CenterX, multiplier: 1, constant: 0)
+        
+        let yConstraint = NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: self.tableView, attribute: .CenterY, multiplier: 1, constant: 0)
+        
+        self.tableView.addConstraint(xConstraint)
+        self.tableView.addConstraint(yConstraint)
+        
+
         return cell!
     }
     
