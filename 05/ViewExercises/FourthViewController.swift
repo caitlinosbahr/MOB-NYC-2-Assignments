@@ -1,4 +1,5 @@
-//STATUS: Added all of the elements, need to wrap in scroll view
+//STATUS: Contents of the scroll view aren't showing up. Errrrgggg.
+
 
 import UIKit
 
@@ -21,6 +22,17 @@ class FourthViewController: ExerciseViewController, UIScrollViewDelegate {
         Your view should be in self.exerciseView, not self.view.
         */
         
+        var scrollView = UIScrollView()
+        scrollView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        let scrollViewTop = NSLayoutConstraint(item: scrollView, attribute: .Top, relatedBy: .Equal, toItem: self.exerciseView, attribute: .Top, multiplier: 1, constant: 0)
+        let scrollViewLeft = NSLayoutConstraint(item: scrollView, attribute: .Left, relatedBy: .Equal, toItem: self.exerciseView, attribute: .Left, multiplier: 1, constant: 0)
+        let scrollViewRight = NSLayoutConstraint(item: scrollView, attribute: .Right, relatedBy: .Equal, toItem: self.exerciseView, attribute: .Right, multiplier: 1, constant: 0)
+        
+        self.exerciseView.addSubview(scrollView)
+        self.exerciseView.addConstraints([scrollViewTop, scrollViewLeft, scrollViewRight])
+        
+        
         var blueBox = UIView()
         blueBox.backgroundColor = UIColor.blueColor()
         blueBox.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -31,7 +43,8 @@ class FourthViewController: ExerciseViewController, UIScrollViewDelegate {
         
         let blueBoxRightMargin = NSLayoutConstraint(item: blueBox, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.exerciseView, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: -10)
         
-        self.exerciseView.addSubview(blueBox)
+//        self.exerciseView.addSubview(blueBox)
+        scrollView.addSubview(blueBox)
         self.exerciseView.addConstraints([blueBoxHeight, blueBoxLeftMargin, blueBoxRightMargin])
         
         
@@ -48,7 +61,8 @@ class FourthViewController: ExerciseViewController, UIScrollViewDelegate {
         
         let purpleLabelAlign = NSLayoutConstraint(item: purpleLabel, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: blueBox, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0)
         
-        self.exerciseView.addSubview(purpleLabel)
+//        self.exerciseView.addSubview(purpleLabel)
+        scrollView.addSubview(purpleLabel)
         self.exerciseView.addConstraints([purpleLabelHeight, purpleLabelWidth, purpleLabelAlign])
         
         
@@ -64,10 +78,14 @@ class FourthViewController: ExerciseViewController, UIScrollViewDelegate {
         
         let redBoxAlign = NSLayoutConstraint(item: redBox, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: purpleLabel, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0)
         
-        self.exerciseView.addSubview(redBox)
+        
+//        self.exerciseView.addSubview(redBox)
+        scrollView.addSubview(redBox)
         self.exerciseView.addConstraints([redBoxHeight, redBoxLeftMargin, redBoxRightMargin, redBoxAlign])
 
         
+        let scrollViewBottom = NSLayoutConstraint(item: scrollView, attribute: NSLayoutAttribute.Bottom, relatedBy: .Equal, toItem: redBox, attribute: .Bottom, multiplier: 1, constant: 0)
+        self.exerciseView.addConstraint(scrollViewBottom)
         
     }
     
