@@ -1,4 +1,4 @@
-// STATUS: Need to animate stuff. Having some issues...
+// STATUS: Animation code is in place, but it crashes on tap.
 
 import UIKit
 
