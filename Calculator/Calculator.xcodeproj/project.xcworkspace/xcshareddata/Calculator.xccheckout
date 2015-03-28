@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>72195465-7A7D-4AAE-98A5-2CFF52E281DF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Calculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7929D607793D7382CE5AE5E257D3E20ED01D3F82</key>
+		<string>https://github.com/theletterc/MOB-NYC-2-Assignments.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Calculator/Calculator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7929D607793D7382CE5AE5E257D3E20ED01D3F82</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/theletterc/MOB-NYC-2-Assignments.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7929D607793D7382CE5AE5E257D3E20ED01D3F82</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7929D607793D7382CE5AE5E257D3E20ED01D3F82</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MOB-NYC-2-Assignments</string>
+		</dict>
+	</array>
+</dict>
+</plist>
