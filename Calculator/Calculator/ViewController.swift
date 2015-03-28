@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var operation = ""
     var result = Int()
     var numberAsString = String()
+    var canConcatenateNumber = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,38 +22,29 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var calcLabel: UILabel!
-    
+    @IBOutlet weak var operationLabel: UILabel!
     
     @IBAction func numberTapped(sender: UIButton) {
-        // this function replaces the number. need it to append
-//        number = sender.titleLabel!.text!.toInt()!
-//        calcLabel.text = "\(number)"
-        
-        
-        // this concatenates each number by converting it into a string while you type
+        // concatenates each number by using strings
         var newNumber = sender.titleLabel!.text!
-        var numberAsString = "\(number)"
-        
-        if number == 0 {
-            numberAsString = newNumber
-        } else {
+
+        if canConcatenateNumber == true {
             numberAsString += newNumber
+        } else {
+            numberAsString = newNumber
         }
         
+        canConcatenateNumber = true
+        
         calcLabel.text = numberAsString
-        number = numberAsString.toInt()! //convert string into integer we can use operations
-
+        number = numberAsString.toInt()! // converts string into integer we can use operations
     }
     
-    
+    // something funny is going on here right now. the operation doesn't seem to remember the first number.
     @IBAction func operationTapped(sender: UIButton) {
+        canConcatenateNumber = false
         operation = sender.titleLabel!.text! as String
-        //need to add something here to "pause" the string concatenation
-    }
-    
-
-    //For some reason this is borked right now
-    @IBAction func equals(sender: AnyObject) {
+        operationLabel.text = "\(operation)"
         
         if operation == "+" {
             result = result + number
@@ -63,17 +55,20 @@ class ViewController: UIViewController {
         } else if operation == "/" {
             result = result / number
         }
-        
+    }
+
+    @IBAction func equals(sender: AnyObject) {
+        canConcatenateNumber = false
         calcLabel.text = "\(result)"
     }
 
 
     @IBAction func clear(sender: AnyObject) {
-
+        canConcatenateNumber = false
         number = 0
         result = 0
-        operation = "="
         calcLabel.text = "\(result)"
+        operationLabel.text = ""
     }
     
     

@@ -373,9 +373,16 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="equals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ys8-4S-Eiq"/>
+                                    <action selector="equals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cp-lV-CZP"/>
+                                    <action selector="operationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05M-sK-GIm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqN-b6-wLy">
+                                <rect key="frame" x="16" y="68" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -420,6 +427,7 @@
                             <constraint firstItem="USv-ZP-1uS" firstAttribute="height" secondItem="SDb-wn-4Lt" secondAttribute="height" id="Vbz-l4-9wM"/>
                             <constraint firstItem="Ppu-Km-i6Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Wuo-OX-LbM"/>
                             <constraint firstItem="i6d-T2-8js" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="YXU-Wx-HYO"/>
+                            <constraint firstItem="T8G-oc-lYu" firstAttribute="baseline" secondItem="PqN-b6-wLy" secondAttribute="baseline" id="ZS8-tE-uvh"/>
                             <constraint firstItem="HLK-LP-nsw" firstAttribute="width" secondItem="ulV-TQ-Mk3" secondAttribute="width" id="bPq-FI-V8l"/>
                             <constraint firstItem="Xzs-9s-9Ge" firstAttribute="height" secondItem="2co-nd-MFf" secondAttribute="height" id="by9-S0-Bdf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KGE-MI-mqm" secondAttribute="bottom" id="c3O-Dd-3lZ"/>
@@ -466,6 +474,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ppu-Km-i6Z" secondAttribute="bottom" id="woh-ug-A6C"/>
                             <constraint firstItem="hXs-EM-2rY" firstAttribute="height" secondItem="HLK-LP-nsw" secondAttribute="height" id="xm8-bP-phi"/>
                             <constraint firstItem="SDb-wn-4Lt" firstAttribute="leading" secondItem="TFs-pg-UPh" secondAttribute="trailing" constant="1" id="xrY-hi-nC6"/>
+                            <constraint firstItem="PqN-b6-wLy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zEv-EP-X0I"/>
                             <constraint firstItem="i6d-T2-8js" firstAttribute="top" secondItem="Fzh-7Z-K3P" secondAttribute="bottom" constant="1" id="zKE-I9-x9L"/>
                         </constraints>
                         <variation key="default">
@@ -480,6 +489,7 @@
                     </view>
                     <connections>
                         <outlet property="calcLabel" destination="T8G-oc-lYu" id="SHd-ot-6Gv"/>
+                        <outlet property="operationLabel" destination="PqN-b6-wLy" id="1ox-MZ-iVh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
