@@ -132,7 +132,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yWS-D8-LOJ"/>
+                                    <action selector="operationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cec-BI-7Gl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzh-7Z-K3P">
@@ -208,7 +208,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="subtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZh-6h-86u"/>
+                                    <action selector="operationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fDa-3l-LLu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-pg-UPh">
@@ -265,7 +265,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3JC-ju-ORh"/>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1cK-es-JsW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ3-rA-vYg">
@@ -284,7 +284,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YjH-ak-acr"/>
+                                    <action selector="operationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jx7-vi-knq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-Ay-odH">
@@ -329,7 +329,7 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="hXs-EM-2rY" secondAttribute="height" multiplier="1:1" id="gBg-0W-Y13"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="div">
+                                <state key="normal" title="/">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
@@ -338,7 +338,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Was-hl-0X7"/>
+                                    <action selector="operationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zwT-22-472"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzs-9s-9Ge">
