@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var calcLabel: UILabel!
-
+    
+    
 
     @IBAction func equals(sender: AnyObject) {
     }
@@ -37,7 +38,8 @@ class ViewController: UIViewController {
     @IBAction func divide(sender: AnyObject) {
     }
     
-    @IBAction func numberTapped(sender: AnyObject) {
+    @IBAction func numberTapped(sender: UIButton) {
+        calcLabel.text = sender.titleLabel!.text!
     }
     
     

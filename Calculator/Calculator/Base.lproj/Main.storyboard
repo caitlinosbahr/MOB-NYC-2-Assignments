@@ -39,6 +39,9 @@
                                         <exclude reference="zhO-F1-qOg"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOp-ca-56Y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGE-MI-mqm">
                                 <rect key="frame" x="300" y="507" width="149.5" height="93"/>
@@ -71,6 +74,9 @@
                                         <exclude reference="I0U-8E-pxn"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xbm-cQ-A4h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKj-eW-4KH">
                                 <rect key="frame" x="150" y="413" width="149" height="92.5"/>
@@ -88,7 +94,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tET-OC-ltF"/>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1WM-l3-3oO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2co-nd-MFf">
@@ -106,6 +112,9 @@
                                         <exclude reference="sPN-RT-tRQ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Beq-iL-Hmm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mm7-j1-W1y">
                                 <rect key="frame" x="451" y="413" width="149" height="92.5"/>
@@ -141,6 +150,9 @@
                                         <exclude reference="WQT-RV-9wi"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IuL-wP-OKD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulV-TQ-Mk3">
                                 <rect key="frame" x="150" y="319" width="149" height="93"/>
@@ -157,6 +169,9 @@
                                         <exclude reference="U0I-rl-5Ji"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aBw-YT-8YW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbs-Zo-BPY">
                                 <rect key="frame" x="300" y="319" width="149.5" height="93"/>
@@ -173,6 +188,9 @@
                                         <exclude reference="Q6c-on-NSW"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7hU-k0-N9q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLK-LP-nsw">
                                 <rect key="frame" x="451" y="319" width="149" height="93"/>
@@ -208,6 +226,9 @@
                                         <exclude reference="yTv-Ce-Wpa"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DtV-sQ-Th5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDb-wn-4Lt">
                                 <rect key="frame" x="150" y="226" width="149" height="92.5"/>
@@ -224,6 +245,9 @@
                                         <exclude reference="4aB-0j-srQ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="goc-pK-90x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSa-i4-D6K">
                                 <rect key="frame" x="300" y="226" width="149.5" height="92.5"/>
@@ -240,6 +264,9 @@
                                         <exclude reference="DYc-mo-NvV"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3JC-ju-ORh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ3-rA-vYg">
                                 <rect key="frame" x="451" y="226" width="149" height="92.5"/>
