@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  Calculator
 //
@@ -9,20 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var calcLabel: UILabel!
+    @IBOutlet weak var operationLabel: UILabel!
     
     var number = Int()
-    var operation = ""
+    var operation = "="
     var result = Int()
     var numberAsString = String()
     var canConcatenateNumber = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    @IBOutlet weak var calcLabel: UILabel!
-    @IBOutlet weak var operationLabel: UILabel!
     
     @IBAction func numberTapped(sender: UIButton) {
         // concatenates each number by using strings
@@ -35,17 +32,13 @@ class ViewController: UIViewController {
         }
         
         canConcatenateNumber = true
-        
         calcLabel.text = numberAsString
         number = numberAsString.toInt()! // converts string into integer we can use operations
     }
     
-    // something funny is going on here right now. the operation doesn't seem to remember the first number.
     @IBAction func operationTapped(sender: UIButton) {
-        canConcatenateNumber = false
-        operation = sender.titleLabel!.text! as String
-        operationLabel.text = "\(operation)"
         
+        /*
         if operation == "+" {
             result = result + number
         } else if operation == "-" {
@@ -55,22 +48,35 @@ class ViewController: UIViewController {
         } else if operation == "/" {
             result = result / number
         }
-    }
-
-    @IBAction func equals(sender: AnyObject) {
-        canConcatenateNumber = false
+        */
+        
+        operation = sender.titleLabel!.text! as String
+        operationLabel.text = "\(operation)"
+        
+        switch operation {
+            case "=":
+                result = number //this does weird things and if you hit the = twice in a row, changes the result to the last number you put instead of doing the previous function again. how do you make it repeat the same operation again?
+            case "+":
+                result = result + number
+            case "-":
+                result = result - number
+            case "x":
+                result = result * number
+            case "/":
+                result = result / number //doesn't show decimal points – change to Float?
+            default:
+                operationLabel.text = ""
+        }
+        
         calcLabel.text = "\(result)"
+        canConcatenateNumber = false
     }
-
 
     @IBAction func clear(sender: AnyObject) {
         canConcatenateNumber = false
         number = 0
         result = 0
-        calcLabel.text = "\(result)"
-        operationLabel.text = ""
+        operation = ""
     }
-    
-    
-}
 
+}
