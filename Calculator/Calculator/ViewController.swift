@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var number = Int()
     var operation = ""
     var result = Int()
+    var numberAsString = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,21 +23,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var calcLabel: UILabel!
     
     
-    //How do you append another number? Right now this just replaces the current number
     @IBAction func numberTapped(sender: UIButton) {
-        number = sender.titleLabel!.text!.toInt()!
+        // this function replaces the number. need it to append
+//        number = sender.titleLabel!.text!.toInt()!
+//        calcLabel.text = "\(number)"
         
-        calcLabel.text = "\(number)"
+        
+        // this concatenates each number by converting it into a string while you type
+        var newNumber = sender.titleLabel!.text!
+        var numberAsString = "\(number)"
+        
+        if number == 0 {
+            numberAsString = newNumber
+        } else {
+            numberAsString += newNumber
+        }
+        
+        calcLabel.text = numberAsString
+        number = numberAsString.toInt()! //convert string into integer we can use operations
+
     }
     
     
     @IBAction func operationTapped(sender: UIButton) {
-        operation = sender.titleLabel!.text! as String //Should I add a label that shows the current operation somewhere to make sure this is doing the right thing?
+        operation = sender.titleLabel!.text! as String
+        //need to add something here to "pause" the string concatenation
     }
     
 
     //For some reason this is borked right now
     @IBAction func equals(sender: AnyObject) {
+        
         if operation == "+" {
             result = result + number
         } else if operation == "-" {
@@ -45,8 +62,6 @@ class ViewController: UIViewController {
             result = result * number
         } else if operation == "/" {
             result = result / number
-        } else {
-            result = number //Not sure this is really what you want here?
         }
         
         calcLabel.text = "\(result)"
@@ -54,16 +69,12 @@ class ViewController: UIViewController {
 
 
     @IBAction func clear(sender: AnyObject) {
+
         number = 0
         result = 0
         operation = "="
         calcLabel.text = "\(result)"
     }
-    
-    
-
-    
-
     
     
 }
