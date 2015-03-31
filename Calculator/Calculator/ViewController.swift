@@ -36,26 +36,14 @@ class ViewController: UIViewController {
         number = numberAsString.toInt()! // converts string into integer we can use operations
     }
     
-    @IBAction func operationTapped(sender: UIButton) {
-        
-        /*
-        if operation == "+" {
-            result = result + number
-        } else if operation == "-" {
-            result = result - number
-        } else if operation == "x" {
-            result = result * number
-        } else if operation == "/" {
-            result = result / number
-        }
-        */
+    @IBAction func operationTapped(sender: UIButton) { //this seemed to work earlier but now is broken. urgh
         
         operation = sender.titleLabel!.text! as String
         operationLabel.text = "\(operation)"
         
         switch operation {
             case "=":
-                result = number //this does weird things and if you hit the = twice in a row, changes the result to the last number you put instead of doing the previous function again. how do you make it repeat the same operation again?
+                result = number
             case "+":
                 result = result + number
             case "-":
