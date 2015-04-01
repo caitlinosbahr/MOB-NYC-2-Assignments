@@ -11,11 +11,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var calcLabel: UILabel!
     @IBOutlet weak var operationLabel: UILabel!
     
-    var number = Float()
+    var number : Float?
     var operation : String?
-    var result = Float()
-    var previousNumber : Float?
-    var shouldErase = false
+    var result : Float?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +23,12 @@ class ViewController: UIViewController {
         
         var numberKey = Float(sender.titleLabel!.text!.toInt()!)
         
-        if  shouldErase {
-            previousNumber = number
+        if number == nil {
             number = 0
-            shouldErase = false
         }
         
-        number = number * 10.0 + numberKey
-        calcLabel.text? = "\(number)"
+        number! = number! * 10.0 + numberKey
+        calcLabel.text? = "\(number!)"
     }
     
     @IBAction func operationTapped(sender: UIButton) {
@@ -40,16 +36,21 @@ class ViewController: UIViewController {
         var currentOperation = sender.titleLabel!.text!
         operationLabel.text = "\(currentOperation)"
         
-        if previousNumber == nil {
-            previousNumber = number
-            number = 0
-            operation = currentOperation
-        } else if operation != nil {
-            number = applyOperation( previousNumber!, op: operation!, secondNumber: number)
-            operation = currentOperation
-            calcLabel.text? = "\(number)"
-            shouldErase = true
-            
+        if result == nil {
+            result = number
+            number = nil
+
+            if currentOperation != "=" {
+                operation = currentOperation
+            }
+        } else if operation != nil && number != nil {
+            result = applyOperation( result!, op: operation!, secondNumber: number!)
+            calcLabel.text? = "\(result!)"
+            number = nil
+            if currentOperation != "=" {
+                
+                operation = currentOperation
+            }
         }
     }
     
@@ -70,8 +71,10 @@ class ViewController: UIViewController {
     
     @IBAction func clear(sender: AnyObject) {
         number = 0
-        result = 0
-        operation = ""
+        result = nil
+        operation = nil
+        calcLabel.text? = "0"
+        operationLabel.text = ""
     }
     
 }

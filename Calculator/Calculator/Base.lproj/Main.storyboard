@@ -303,7 +303,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zs0-55-c7I"/>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWr-KS-b1I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USv-ZP-1uS">
