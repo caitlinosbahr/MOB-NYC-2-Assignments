@@ -11,60 +11,67 @@ class ViewController: UIViewController {
     @IBOutlet weak var calcLabel: UILabel!
     @IBOutlet weak var operationLabel: UILabel!
     
-    var number = Int()
-    var operation = "="
-    var result = Int()
-    var numberAsString = String()
-    var canConcatenateNumber = false
-
+    var number = Float()
+    var operation : String?
+    var result = Float()
+    var previousNumber : Float?
+    var shouldErase = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func numberTapped(sender: UIButton) {
-        // concatenates each number by using strings
-        var newNumber = sender.titleLabel!.text!
-
-        if canConcatenateNumber == true {
-            numberAsString += newNumber
-        } else {
-            numberAsString = newNumber
+        
+        var numberKey = Float(sender.titleLabel!.text!.toInt()!)
+        
+        if  shouldErase {
+            previousNumber = number
+            number = 0
+            shouldErase = false
         }
         
-        canConcatenateNumber = true
-        calcLabel.text = numberAsString
-        number = numberAsString.toInt()! // converts string into integer we can use operations
+        number = number * 10.0 + numberKey
+        calcLabel.text? = "\(number)"
     }
     
-    @IBAction func operationTapped(sender: UIButton) { //this seemed to work earlier but now is broken. urgh
+    @IBAction func operationTapped(sender: UIButton) {
         
-        operation = sender.titleLabel!.text! as String
-        operationLabel.text = "\(operation)"
+        var currentOperation = sender.titleLabel!.text!
+        operationLabel.text = "\(currentOperation)"
         
-        switch operation {
-            case "=":
-                result = number
-            case "+":
-                result = result + number
-            case "-":
-                result = result - number
-            case "x":
-                result = result * number
-            case "/":
-                result = result / number //doesn't show decimal points – change to Float?
-            default:
-                operationLabel.text = ""
+        if previousNumber == nil {
+            previousNumber = number
+            number = 0
+            operation = currentOperation
+        } else if operation != nil {
+            number = applyOperation( previousNumber!, op: operation!, secondNumber: number)
+            operation = currentOperation
+            calcLabel.text? = "\(number)"
+            shouldErase = true
+            
         }
-        
-        calcLabel.text = "\(result)"
-        canConcatenateNumber = false
     }
-
+    
+    func applyOperation(firstNumber: Float, op: String, secondNumber: Float) -> Float {
+        switch op {
+        case "x":
+            return firstNumber * secondNumber
+        case "/":
+            return firstNumber / secondNumber
+        case "+":
+            return firstNumber + secondNumber
+        case "-":
+            return firstNumber - secondNumber
+        default:
+            return 0
+        }
+    }
+    
     @IBAction func clear(sender: AnyObject) {
-        canConcatenateNumber = false
         number = 0
         result = 0
         operation = ""
     }
-
+    
 }
