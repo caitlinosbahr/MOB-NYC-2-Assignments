@@ -26,6 +26,6 @@ class SecondViewController: UIViewController {
         }
         
         textView.text = text
-    }
+    } 
     
 }
