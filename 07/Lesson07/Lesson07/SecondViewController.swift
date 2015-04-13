@@ -14,18 +14,23 @@ class SecondViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateText", name: NSUserDefaultsDidChangeNotification, object: nil)
     }
     
-    
+
     func updateText() {
-        let string = settings.stringForKey("settings_name")
+        var settingsName = settings.stringForKey("settings_name")
         
-        var text = string
+        var text = settingsName
         
-        var sliderValue: AnyObject? = settings.valueForKey("settings_slider")!
-        if let slider: AnyObject = sliderValue {
-            text = string! + " \(sliderValue!)"
+        var sliderValue: AnyObject? = settings.valueForKey("settings_slider")
+        
+        if sliderValue != nil {
+            text = settingsName! + " \(sliderValue!)"
         }
         
-        textView.text = text
-    } 
+        if text != nil {
+            self.textView.text = text
+        } else {
+            self.textView.text = "No settings found"
+        }
+    }
     
 }
