@@ -12,12 +12,11 @@ class FifthViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     
-    /* dude why isn't this working,
-    let myString : String = textView.text
-    let myArray = myString.componentsSeparatedByString(" ")
-    
-    return myArray
-    */
 
+    //this works, but still having trouble saving stuff in a textview to a file. add that later
+    func stringToArray() {
+        let myString : String = textView.text
+        let myArray : Array = myString.componentsSeparatedByString(" ")
+    }
     
 }
