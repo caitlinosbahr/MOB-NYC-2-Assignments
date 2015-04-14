@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C2055" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cb5-j1-aH8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cb5-j1-aH8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -149,14 +149,11 @@
                     <navigationItem key="navigationItem" id="W4c-fq-GLh">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="BAS-oR-Hjw">
                             <connections>
-                                <action selector="pressedNext:" destination="lWA-Qe-LpN" id="TMV-0j-mTS"/>
+                                <action selector="pressedNext:" destination="lWA-Qe-LpN" id="Xsd-Rw-GMT"/>
                                 <segue destination="03b-O5-o7r" kind="show" id="oNc-T8-vY0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="textView" destination="zba-PB-Qsj" id="Z57-G4-Trg"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JI4-wm-MiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,6 +228,9 @@
                             <constraint firstItem="e66-bG-ZBU" firstAttribute="top" secondItem="qPA-4h-ilE" secondAttribute="bottom" id="wFw-wb-w01"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="qPA-4h-ilE" id="GIM-Ja-BQw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oU3-RH-uDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,6 +267,7 @@
                     <navigationItem key="navigationItem" id="XAI-xr-9Z9">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="ezv-go-RsM">
                             <connections>
+                                <action selector="pressedNext:" destination="ZvF-or-Q6s" id="b8b-eZ-DaC"/>
                                 <segue destination="mbK-IF-1aJ" kind="show" id="yHd-vX-Zt1"/>
                             </connections>
                         </barButtonItem>

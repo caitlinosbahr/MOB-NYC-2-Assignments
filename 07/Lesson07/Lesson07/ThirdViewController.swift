@@ -6,7 +6,8 @@ import Foundation
 class ThirdViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
-    
+
+    //Strategy from class
     /*
     var pathToFile : NSURL? {
         get {
@@ -21,8 +22,8 @@ class ThirdViewController: UIViewController {
     }
     */
     
-    //trying strategy from mobbook below
-    
+    //Strategy from mobbook
+    /*
     let path = NSTemporaryDirectory() + "thirdview.plist"
     var textToWrite = String()
     
@@ -36,11 +37,26 @@ class ThirdViewController: UIViewController {
             textToWrite.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
         }
     }
+    */
     
     
     @IBAction func pressedNext(sender: AnyObject) {
         writeFile()
     }
     
+    //strategy from stack overflow question... still doesn't work.
+    func writeFile(){
+        let file = "file.txt"
+
+        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as? [String] {
+            let dir = dirs[0] //documents directory
+            let path = dir.stringByAppendingPathComponent(file)
+            let text = textView.text
+            
+            //writing
+            text.writeToFile(path, atomically: false, encoding: NSUTF8StringEncoding, error: nil)
+        }
+
+    }
     
 }
