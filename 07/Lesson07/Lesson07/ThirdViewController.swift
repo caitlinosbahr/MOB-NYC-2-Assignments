@@ -7,23 +7,23 @@ class ThirdViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
     
-    /*
-    var pathToFile : NSURL? {
-        get {
-            let filename = "thirdview.txt"
-            
-            let docDirectory = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).first as NSURL
-            let url = docDirectory.URLByAppendingPathComponent(filename, isDirectory: false)
-            
-            println(url)
-            return url
-        }
+
+    override func viewWillDisappear(animated: Bool) {
+        let filename = "thirdview.txt"
+        
+        let docDirectory = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as! NSURL
+        let url = docDirectory.URLByAppendingPathComponent(filename)
+        
+        textView.text.writeToURL(url, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
     }
-    */
+}
+
     
-    //trying strategy from mobbook below
     
-    let path = NSTemporaryDirectory() + "thirdview.plist"
+    /*
+    trying strategy from mobbook below - Noted to ask Arun about why this doesn't work
+    
+    let path = NSTemporaryDirectory() + "thirdview.txt"
     var textToWrite = String()
     
     func writeFile() {
@@ -36,11 +36,8 @@ class ThirdViewController: UIViewController {
             textToWrite.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
         }
     }
+    */
     
+
     
-    @IBAction func pressedNext(sender: AnyObject) {
-        writeFile()
-    }
-    
-    
-}
+

@@ -9,16 +9,17 @@ class FourthViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let path = NSTemporaryDirectory() + "thirdview.plist"
-        var textToDisplay = String()
         
-        if NSFileManager().fileExistsAtPath(path) {
-            textToDisplay = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
-            textView.text = textToDisplay
-        } else {
-            textView.text = "No file found"
-        }
+        
+        let filename = "thirdview.txt"
+        
+        let docDirectory = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as! NSURL
+        let url = docDirectory.URLByAppendingPathComponent(filename)
+
+        
+        let text = String(contentsOfURL: url, encoding: NSUTF8StringEncoding, error: nil)
+        
+        textView.text = text
     }
 }
 

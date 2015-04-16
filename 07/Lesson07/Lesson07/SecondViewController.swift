@@ -20,7 +20,7 @@ class SecondViewController: UIViewController {
         
         var text = settingsName
         
-        var sliderValue: AnyObject? = settings.valueForKey("settings_slider")
+        var sliderValue: AnyObject? = settings.valueForKey("settings_slider") 
         
         if sliderValue != nil {
             text = settingsName! + " \(sliderValue!)"
