@@ -4,19 +4,21 @@ import UIKit
 
 class FifthViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillDisappear(animated: Bool) {
+        let filename = "fifthview.txt"
         
-        // Do any additional setup after loading the view.
+        let docDirectory = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as! NSURL
+        let url = docDirectory.URLByAppendingPathComponent(filename)
+        
+        let myString : String = textView.text
+        let myArray : Array = myString.componentsSeparatedByString(" ")
+        let stringForFile = "\(myArray)"
+        
+        stringForFile.writeToURL(url, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
     }
     
     @IBOutlet weak var textView: UITextView!
     
 
-    //this works, but still having trouble saving stuff in a textview to a file. add that later
-    func stringToArray() {
-        let myString : String = textView.text
-        let myArray : Array = myString.componentsSeparatedByString(" ")
-    }
     
 }
