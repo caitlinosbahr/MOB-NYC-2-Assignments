@@ -149,7 +149,6 @@
                     <navigationItem key="navigationItem" id="W4c-fq-GLh">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="BAS-oR-Hjw">
                             <connections>
-                                <action selector="pressedNext:" destination="lWA-Qe-LpN" id="TMV-0j-mTS"/>
                                 <segue destination="03b-O5-o7r" kind="show" id="oNc-T8-vY0"/>
                             </connections>
                         </barButtonItem>

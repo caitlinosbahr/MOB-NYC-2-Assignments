@@ -19,7 +19,6 @@ class ThirdViewController: UIViewController {
 }
 
     
-    
     /*
     trying strategy from mobbook below - Noted to ask Arun about why this doesn't work
     
@@ -37,7 +36,3 @@ class ThirdViewController: UIViewController {
         }
     }
     */
-    
-
-    
-

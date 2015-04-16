@@ -10,7 +10,6 @@ class FourthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let filename = "thirdview.txt"
         
         let docDirectory = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as! NSURL
@@ -21,5 +20,6 @@ class FourthViewController: UIViewController {
         
         textView.text = text
     }
+    
 }
 
