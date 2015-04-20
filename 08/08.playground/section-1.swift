@@ -45,4 +45,52 @@ failedConnection()
 
 //TODO three: Make a successful network connection to http://api.openweathermap.org/data/2.5/weather?q=New%20York,US, an API that speaks JSON using core networking APIs. Create a model class that corresponds to the JSON response object, populate it with the contents of that JSON using NSJSONSerialization, then print out the model.
 
+class ForecastModel {
+    var coord : NSDictionary!
+    var sys : NSDictionary!
+    var weather : NSArray! //how would I get into this array and just show the subcontents here? Can't remember
+    var base : NSString!
+    var main : NSDictionary!
+    var wind : NSDictionary!
+    var clouds : NSDictionary!
+    var rain : NSDictionary!
+}
+
+func getForecast() {
+    let url = NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=New%20York,US")!
+    var forecast = ForecastModel()
+    
+    let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+        
+        var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.allZeros, error: nil) as! NSDictionary
+        
+        //parse and print here using standard Swift syntax - need to refresh my memory on how this works...
+        
+    })
+    
+    task.resume()
+}
+
+//getForecast()
+
+
 //TODO four: Make a successful network connection to http://api.openweathermap.org/data/2.5/weather?q=New%20York,US, an API that speaks JSON. Populate a your above-defined model with the contents of that JSON using SwiftyJSON, then print out the model.
+
+func getSwiftyForecast() {
+    let url = NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=New%20York,US")!
+    var forecast = ForecastModel()
+    
+    let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+        
+        var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.allZeros, error: nil) as! NSDictionary
+        
+        //parse and print here using SwiftyJSON syntax - maybe in a Project? Not sure how to connect Swifty in a Playground
+        
+    })
+    
+    task.resume()
+}
+
+//getSwiftyForecast()
+
+
