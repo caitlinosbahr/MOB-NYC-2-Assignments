@@ -33,7 +33,7 @@ class ViewController: UIViewController {
             let clouds = (json as NSDictionary)["clouds"] as! NSDictionary
             let rain = (json as NSDictionary)["rain"] as! NSDictionary
             
-            //moved the println into the model. Is that right? Or should I be printing here? IDK
+            //moved the print function into the model. Is that right? Or should I be printing here? IDK
             self.forecast.printModel()
         })
         
@@ -51,16 +51,18 @@ class ViewController: UIViewController {
             
             var json = JSON(data: data)
             
-            //not sure how to print dicts?
-            self.forecast.coord = json["coord"]
-            self.forecast.sys = json["sys"]
-            self.forecast.weather = json["weather"]
-            self.forecast.base = json["base"]
-            self.forecast.main = json["main"]
-            self.forecast.wind = json["wind"]
-            self.forecast.clouds = json["clouds"]
-            self.forecast.rain = json["rain"]
+            //not sure how to parse dicts? dictionaryValue doesn't work and I can't understand what Arun did with the for-loop in the previous weather app project
             
+//            self.forecast.coord = json["coord"]
+//            self.forecast.sys = json["sys"]
+//            self.forecast.weather = json["weather"]
+            self.forecast.base = json["base"].stringValue
+//            self.forecast.main = json["main"]
+//            self.forecast.wind = json["wind"]
+//            self.forecast.clouds = json["clouds"]
+//            self.forecast.rain = json["rain"]
+            
+            self.forecast.printModel()
             
         })
         
