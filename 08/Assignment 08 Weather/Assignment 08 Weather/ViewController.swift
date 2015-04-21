@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
             
             var json = JSON(data: data)
+//            let json = JSON(jsonObject) //why is this in the SwiftyJSON documentation? Not sure what this does and xcode errors when I include it
             
             //not sure how to parse dicts? dictionaryValue doesn't work and I can't understand what Arun did with the for-loop in the previous weather app project
             
@@ -61,6 +62,8 @@ class ViewController: UIViewController {
 //            self.forecast.wind = json["wind"]
 //            self.forecast.clouds = json["clouds"]
 //            self.forecast.rain = json["rain"]
+            
+            
             
             self.forecast.printModel()
             

@@ -11,7 +11,7 @@ import Foundation
 class ForecastModel {
     var coord : NSDictionary!
     var sys : NSDictionary!
-    var weather : NSArray! //how would I get into this array and just show the subcontents? In the class or in the parsing function?
+    var weather : NSArray! 
     var base : NSString!
     var main : NSDictionary!
     var wind : NSDictionary!
